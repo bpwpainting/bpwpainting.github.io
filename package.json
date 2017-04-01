@@ -4,7 +4,13 @@
   "description": "Site",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"lessc site.less site.css\" \"npm run lite\"",
+    "lite": "lite-server"
+  },
+  "devDependencies": {
+    "concurrently": "^3.0.0",
+    "less": "^2.7.2",
+    "lite-server": "^2.2.2"
   },
   "repository": {
     "type": "git",
