@@ -1,4 +1,9 @@
+@phone-p: ~"only screen and (max-width: 414px)";
+@phone-l: ~"only screen and (min-width: 415px) and (max-width: 768px)";
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   color: rgb(1, 40, 64);
@@ -50,6 +55,7 @@ body {
       label {
         font-weight: bold;
         margin-left: 5px;
+        line-height: 1.4;
       }
     }
 
@@ -61,7 +67,7 @@ body {
 }
 
 .footer {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -79,4 +85,17 @@ body {
     color: rgb(77, 163, 123);
   }
 
+}
+
+@media @phone-p {
+  .content {
+    h1 { margin-bottom: 10px; }
+    .contact-form {
+      left: 0;
+      right: 0;
+      transform: none;
+
+      .row { width: 100%; }
+    }
+  }
 }
