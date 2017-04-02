@@ -7,12 +7,13 @@
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
   <link rel="stylesheet" href="site.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
 </head>
 <body>
   <div class="content">
       <h1><span>BPW</span> Painting</h1>
     <div class="hero"></div>
-    <div class="contact-form">
+    <form id="contact-form" action="https://formspree.io/brian@bpwpainting.com" method="post">
       <h3>Contact Us</h3>
       <div class="row">
         <label for="name">name</label>
@@ -24,7 +25,7 @@
       </div>
       <div class="row">
         <label for="email">email address</label>
-        <input type="email" name="email">
+        <input type="email" name="email" name="_replyto">
       </div>
       <div class="row">
         <label for="pref">contact preference</label>
@@ -37,11 +38,42 @@
         <label for="description">description of job</label>
         <textarea name="description" rows="8" cols="80"></textarea>
       </div>
+      <div class="other-fields">
+        <input type="text" name="_gotcha">
+        <input type="text" name="_subject" value="Message from bpwpainting.com">
+        <input type="text" name="_next" value="thankyou.html">
+      </div>
       <div>
-        <button type="submit" name="submit">Send</button>
+        <!-- <button type="button" id="send">Send</button> -->
+        <button type="submit">Send</button>
       </div>
     </div>
   </div>
   <div class="footer">a page by&nbsp;<a href="http://elanttam.com" target="_blank">elanttam</a></div>
 </body>
+<!-- <script type="text/javascript">
+  $('#send').on('click', function() {
+
+    var name = ['name', $('#name').val()].join(': '),
+        phone = ['phone', $('#phone').val()].join(': '),
+        email = ['email', $('#email').val()].join(': '),
+        pref = ['contact preference', ''].join(': '),
+        desc = ['description', $('#description').val()].join(': ');
+    $.ajax({
+      url: "https://formspree.io/brian@bpwpainting.com",
+      method: "POST",
+      data: {
+        message: [name, phone, email, pref, desc].join('<br/>')
+      },
+      dataType: "json",
+      success: function() {
+        alert('it worked!');
+      },
+      error: function(e) {
+        console.log(e);
+      }
+    });
+  });
+
+</script> -->
 </html>

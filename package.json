@@ -7,6 +7,9 @@
     "start": "concurrently \"lessc site.less site.css\" \"npm run lite\"",
     "lite": "lite-server"
   },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
   "devDependencies": {
     "concurrently": "^3.0.0",
     "less": "^2.7.2",

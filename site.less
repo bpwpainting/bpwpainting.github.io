@@ -39,7 +39,7 @@ body {
     }
   }
 
-  .contact-form {
+  #contact-form {
     margin: 0.8rem;
     position: absolute;
     top: 100px;
@@ -63,6 +63,22 @@ body {
       display: flex;
       justify-content: flex-end;
     }
+
+    .other-fields { display: none !important; }
+  }
+
+  .centered {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h3 {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
   }
 }
 
@@ -72,14 +88,14 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 30px;
   padding-right: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
     color: rgb(77, 163, 123);
@@ -90,7 +106,7 @@ body {
 @media @phone-p {
   .content {
     h1 { margin-bottom: 10px; }
-    .contact-form {
+    #contact-form {
       left: 0;
       right: 0;
       transform: none;
