@@ -10,8 +10,37 @@
 </head>
 <body>
   <div class="content">
-      <h1>BPW Painting</h1>
+      <h1><span>BPW</span> Painting</h1>
     <div class="hero"></div>
+    <div class="contact-form">
+      <h3>Contact Us</h3>
+      <div class="row">
+        <label for="name">name</label>
+        <input type="text" name="name">
+      </div>
+      <div class="row">
+        <label for="phone">phone number</label>
+        <input type="tel" name="phone">
+      </div>
+      <div class="row">
+        <label for="email">email address</label>
+        <input type="email" name="email">
+      </div>
+      <div class="row">
+        <label for="pref">contact preference</label>
+        <div class="radio-btns">
+          <input type="radio" name="pref" value="phone"> phone
+          <input type="radio" name="pref" value="email"> email
+        </div>
+      </div>
+      <div class="row">
+        <label for="description">description of job</label>
+        <textarea name="description" rows="8" cols="80"></textarea>
+      </div>
+      <div>
+        <button type="submit" name="submit">Send</button>
+      </div>
+    </div>
   </div>
   <div class="footer">a page by&nbsp;<a href="http://elanttam.com" target="_blank">elanttam</a></div>
 </body>
